@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Reviews</title>
+</head>
+<body>
+		<header>
+				<h1> Reviews </h1>
+		</header>
+		<nav>
+				<ul>
+						<li><a href="/reviews"> Reviews </a></li>
+						<li th: each="review : ${reviews}"><a th: href="|reviews/${review.id}|" 
+						th: text= "${review.name()}">Review</a></li>
+				
+				
+				</ul>
+		
+		</nav>
+		
+</body>
+</html>
