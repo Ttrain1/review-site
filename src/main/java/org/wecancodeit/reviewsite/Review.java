@@ -3,19 +3,24 @@ package org.wecancodeit.reviewsite;
 public class Review {
 
 	long id;
-	String title;
-	String imageUrl;
-	String imageNotShow;
-	String category;
-	String rateing;
-	public Review(long id, String title, String imageUrl, String imageNotShow, String category, String rateing) {
-		super();
+	private String title;
+	private String image;
+	private String imageUrl;
+	private String imageNotShow;
+	private String category;
+	private String rateing;
+	
+	public Review(Long id, String title, String image, String imageUrl, String imageNotShow, String category, String rateing) {
 		this.id = id;
 		this.title = title;
+		this.image = image;
 		this.imageUrl = imageUrl;
 		this.imageNotShow = imageNotShow;
 		this.category = category;
 		this.rateing = rateing;
+	}
+	public String getImage() {
+		return image;
 	}
 	public long getId() {
 		return id;
